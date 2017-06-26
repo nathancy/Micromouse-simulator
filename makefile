@@ -33,3 +33,4 @@ clean:
 	rm level3.o
 	rm menu.o
 	rm mousecam.o
+	rm mazerunner
