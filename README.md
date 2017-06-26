@@ -1,6 +1,8 @@
 # Micromouse-simulator
 Micromouse simulator with four levels
 
+[![Video](http://img.youtube.com/vi/Nb8YTFCTzjM/0.jpg)](https://www.youtube.com/watch?v=Nb8YTFCTzjM)
+
 ### Level 0: Drive the Mouse
 You may use w,s,a,d commands in the predefined visible maze to control the mouse. Features:
 
@@ -40,7 +42,6 @@ Clone the repository with:
 ```
 git clone https://github.com/nathancy/Micromouse-simulator.git
 cd Micromouse-simulator
-
 ```
 Build the simulator with:
 ```
