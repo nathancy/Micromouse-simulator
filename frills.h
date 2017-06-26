@@ -14,10 +14,7 @@
      the map.
    - Hidden easter eggs. */
 
-int random_mouse(void);
 /* Given nothing, used when the user presses ' '. Returns either 1 or 2.
-   The returned value is used to call on right or left hugger in Level 3 
+   The returned value is used to call on right or left hugger in Level 3
    and generates random mouse movement. */
-
-
-
+int random_mouse(void);

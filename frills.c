@@ -14,7 +14,7 @@
 /* Additional frills:
    - Default level is 0.
    - In level 2 and above, a new maze map is available.
-   - The space command is drunken mouse. Moves the mouse randomly across 
+   - The space command is drunken mouse. Moves the mouse randomly across
      the map.
    - Hidden easter eggs. */
 
@@ -26,16 +26,10 @@ int random_mouse(void)
 {
 /* Change the seed */
     srand(time(NULL));
-    int random_value_bb_shua; 
+    int random_value;
 
 /* Get value of 1 or 2 */
-    random_value_bb_shua = (rand() % 2 + 1);
+    random_value = (rand() % 2 + 1);
 
-    return random_value_bb_shua;
+    return random_value;
 }
-
-
-
-
-
-
