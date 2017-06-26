@@ -24,11 +24,11 @@
    random mouse movement. */
 int random_mouse(void)
 {
-/* Change the seed */
+    /* Change the seed */
     srand(time(NULL));
     int random_value;
 
-/* Get value of 1 or 2 */
+    /* Get value of 1 or 2 */
     random_value = (rand() % 2 + 1);
 
     return random_value;
