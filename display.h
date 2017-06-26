@@ -5,7 +5,7 @@
  */
 
 /*  This file contains the prototypes for useful funcitons in the display.o
-	library  */
+	  library  */
 
 #define MAXR 16
 #define MAXC 16
