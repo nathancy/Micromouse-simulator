@@ -4,7 +4,7 @@
      Date  : 5/7/2015
      Team  : Hot Wings  */
 
-/* File for rainbow colors */
+/* File for rainbow color fonts */
 
 #include <stdio.h>
 
