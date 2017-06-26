@@ -92,7 +92,7 @@ void level2(int level)
   /* As long as command is not quit */
   while (input != 'q')
   {
-      /* Clear win messages when flag is triggered */
+      	  /* Clear win messages when flag is triggered */
 	  if (win == TRUE)
 	  {
 	    write_message(blank, 3);
@@ -107,12 +107,12 @@ void level2(int level)
 		  case 'a' :
 			         dir = getdirection(input, dir);
 			         break;
-          case 's' :
+          	  case 's' :
 			         dir = getdirection(input, dir);
-				     break;
-          case 'd' :
+				 break;
+          	  case 'd' :
 			         dir = getdirection(input, dir);
-				     break;
+				 break;
 
 		  /* Move foward in new direction */
 		  case 'w' : 
@@ -166,7 +166,7 @@ void level2(int level)
                      hide_me_cheese(maze);
                      break;
 		  /* Right wall hugger */
-	      case 'r' : 
+	          case 'r' : 
                      /* Clear messages if flags were triggered */
                      if(ready == TRUE)
                      {
@@ -220,13 +220,13 @@ void level2(int level)
                      cells ++;
                      break;
 		  /* Print error messages */
-	      case ' ' :
+	          case ' ' :
                      write_message(space, 9);
                      write_message(error, 2);
                      spaceerror = TRUE;
 			         break;
 		  default  :
-	  	             if (d_error == FALSE)
+	  	     if (d_error == FALSE)
                      {
                         write_message(error, 2);
                      }
@@ -243,16 +243,16 @@ void level2(int level)
 	  mouse_cam(wcam, ncam, ecam);	
 	
 	  /* Print win messages */
-      if ((x == 8 || x == 7) && (y == 8 || y == 7))
+          if ((x == 8 || x == 7) && (y == 8 || y == 7))
 	  {	
-        write_message("WIN!!", 3);
-        write_message("    WIN!!", 2);
-        write_message("        WIN!!",1);
-        win = TRUE;
+              write_message("WIN!!", 3);
+              write_message("    WIN!!", 2);
+              write_message("        WIN!!",1);
+              win = TRUE;
 	  }
 	
 	  /* Print crash messages */
-      if (dir == CRASH)
+          if (dir == CRASH)
 	  {
 		  /* Show crashed mouse */
 		  show_mouse(dir, x, y);
@@ -303,17 +303,17 @@ void level2(int level)
 	  {
 		  maze[x][y] = 1;
 		  /* Increment unique cell counter */
-	      unique_c++;
-      }
+	          unique_c++;
+          }
 
 	  /* Show number of unique cells on display */
-      show_unique_cells(unique_c);
+          show_unique_cells(unique_c);
 
 	  /* Show number of cells on display */
-      show_cells(cells);
+          show_cells(cells);
 
 	  /* Show mouse on display */
-      show_mouse(dir, x, y);
+          show_mouse(dir, x, y);
 
 	  /* Place walls onto display */
 	  put_walls(x, y, north, east, west, south);
