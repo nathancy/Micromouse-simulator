@@ -96,12 +96,12 @@ void level3(int level)
   while (input != 'q')
   {
 	  /* Clear win messages when flag is triggered */
-      if (win == TRUE)
+          if (win == TRUE)
 	  {
-         write_message(blank, 3);
-         write_message(blank, 2);
-         write_message(blank, 1);
-         win == FALSE;
+              write_message(blank, 3);
+              write_message(blank, 2);
+              write_message(blank, 1);
+              win == FALSE;
 	  }
 
 	  switch(input)
@@ -113,256 +113,256 @@ void level3(int level)
 		  case 's' :
 			          dir = getdirection(input, dir);
 		   	          break;
-	      case 'd' :
+	          case 'd' :
 			          dir = getdirection(input, dir);
-		    	      break;
+		    	          break;
 		  /* Move forward in new direction */
 		  case 'w' : 
 			          /* Increment number of cells */
-				      cells ++;
+				  cells ++;
 
-                      /* Clear initial ready message */
-                      if(ready == TRUE)
-                      {
-                          write_message(blank, 10);
-                          ready = FALSE;
-                      }
+	                          /* Clear initial ready message */
+                                  if(ready == TRUE)
+                                  {
+                                      write_message(blank, 10);
+                                      ready = FALSE;
+                                  }
             
-                      /* Clear message if user uses spacebar */
-                      if(frillflag == TRUE)
-                      {
-                          write_message(blank, 8);
-                          frillflag = FALSE;
-                      }
+                                  /* Clear message if user uses spacebar */
+                                  if(frillflag == TRUE)
+                                  {
+                                      write_message(blank, 8);
+                                      frillflag = FALSE;
+                                  }
 
-                      /* Clear win message if user restarts */
-                      if(flagrestart == TRUE)
-                      {
-                          write_message(blank, 10);
-                          flagrestart == FALSE;
-                      }
+                                  /* Clear win message if user restarts */
+                                  if(flagrestart == TRUE)
+                                  {
+                                      write_message(blank, 10);
+                                      flagrestart == FALSE;
+                                  }
             
-                      /* Clear error message for default errors */
-                      if(d_error == TRUE)
-                      {
-                          write_message(blank, 2);
-                          d_error = FALSE;
-                      }
+                                  /* Clear error message for default errors */
+                                  if(d_error == TRUE)
+                                  {
+                                      write_message(blank, 2);
+                                      d_error = FALSE;
+                                  }
 
-                      /* Clear message for MVP flags */
-                      if(tep_flag == TRUE) 
-                      {
-                          write_message(blank, 8);
-                          tep_flag = FALSE;
-                      }
+                                  /* Clear message for MVP flags */
+                                  if(tep_flag == TRUE) 
+                                  {
+                                      write_message(blank, 8);
+                                      tep_flag = FALSE;
+                                  }
 
-                      if(kellen_flag == TRUE)
-                      {
-                          write_message(blank, 8);
-                          kellen_flag = FALSE;
-                      }
+                                  if(kellen_flag == TRUE)
+                                  {
+                                      write_message(blank, 8);
+                                      kellen_flag = FALSE;
+                                  }
 
-                      /* Check for crash */
-                      checker = checkcrash(dir, &north, &east, &west, &south);
+                                  /* Check for crash */
+                                  checker = checkcrash(dir, &north, &east, &west, &south);
                        
-                      /* If crash, change direction to crash */
-                      if (checker == TRUE)
-                      { 
-                          dir = CRASH;
-                      }
+                                  /* If crash, change direction to crash */
+                                  if (checker == TRUE)
+                                  { 
+                                      dir = CRASH;
+                                  }
                 
-                      /* If did not crash, move the mouse */
-                      else
-                      {
-                          movemouse(dir, &y, &x);
-                      }
-                      break;
+                                  /* If did not crash, move the mouse */
+                                  else
+                                  {
+                                      movemouse(dir, &y, &x);
+                                  }
+                                  break;
 
 		  /* Reveal the maze */
 		  case 'm' :
-		              cheese_scope_v2();
-		    	      break;
+		                  cheese_scope_v2();
+		    	          break;
 
 		  /* Hide the maze */
 		  case 'n' :
-		              hide_me_cheese(maze);
-				      break;
+		                  hide_me_cheese(maze);
+				  break;
 
 		  /* Right wall hugger */
 		  case 'r' : 
-                      /* Clear messages if flags were triggered */
-                      if(ready == TRUE)
-                      {
-                          write_message(blank, 10);
-                          ready = FALSE;
-                      }
+                                  /* Clear messages if flags were triggered */
+                                  if(ready == TRUE)
+                                  {
+                                      write_message(blank, 10);
+                                      ready = FALSE;
+                                  }
             
-                      if(flagrestart == TRUE)
-                      {
-                          write_message(blank, 10);
-                          flagrestart == FALSE;
-                      }
-                      if(d_error == TRUE)
-                      {
-                          write_message(blank, 2);
-                          d_error = FALSE;
-                      }
+                                  if(flagrestart == TRUE)
+                                  {
+                                      write_message(blank, 10);
+                                      flagrestart == FALSE;
+                                  }
+                                  if(d_error == TRUE)
+                                  {
+                                      write_message(blank, 2);
+                                      d_error = FALSE;
+                                  }
+                        
+                                  if(tep_flag == TRUE)
+                                  {
+                                      write_message(blank, 8);
+                                      tep_flag = FALSE;
+                                  }
 
-                      if(tep_flag == TRUE)
-                      {
-                          write_message(blank, 8);
-                          tep_flag = FALSE;
-                      }
+                                  if(kellen_flag == TRUE)
+                                  {
+                                      write_message(blank, 8);
+                                      kellen_flag = FALSE;
+                                  }	
 
-                      if(kellen_flag == TRUE)
-                      {
-                          write_message(blank, 8);
-                          kellen_flag = FALSE;
-                      }	
+                                  if(frillflag == TRUE)
+                                  {
+                                      write_message(blank, 8);
+                                      frillflag = FALSE;
+                                  }
 
-                      if(frillflag == TRUE)
-                      {
-                          write_message(blank, 8);
-                          frillflag = FALSE;
-                      }
-
-                      /* Move mouse along right wall */
-                      right_hugger(&dir, &x, &y, north, east, west, south);
-                      /* Increment numbre of cells */
-                      cells ++;
-                       break;
+                                  /* Move mouse along right wall */
+                                  right_hugger(&dir, &x, &y, north, east, west, south);
+                                  /* Increment numbre of cells */
+                                  cells ++;
+                                  break;
 
 		  /* Left wall hugger */
 		  case 'l' : 
-			          /* Clear messages if flags were triggered */
-                      if(ready == TRUE)
-                      {
-                          write_message(blank, 10);
-                          ready = FALSE;
-                      }
+		                  /* Clear messages if flags were triggered */
+                                  if(ready == TRUE)
+                                  {
+                                      write_message(blank, 10);
+                                      ready = FALSE;
+                                  }
+                        
+                                  if(tep_flag == TRUE)
+                                  {
+                                      write_message(blank, 8);
+                                      tep_flag = FALSE;
+                                  }
+
+                                  if(kellen_flag == TRUE)
+                                  {
+                                      write_message(blank, 8);
+                                      kellen_flag = FALSE;
+                                  }	
             
-                      if(tep_flag == TRUE)
-                      {
-                          write_message(blank, 8);
-                          tep_flag = FALSE;
-                      }
+                                  if(flagrestart == TRUE)
+                                  {
+                                      write_message(blank, 10);
+                                      flagrestart == FALSE;
+                                  }
 
-                      if(kellen_flag == TRUE)
-                      {
-                          write_message(blank, 8);
-                          kellen_flag = FALSE;
-                      }	
+                                  if(d_error == TRUE)
+                                  {
+                                      write_message(blank, 2);
+                                      d_error = FALSE;
+                                  }
 
-                      if(flagrestart == TRUE)
-                      {
-                          write_message(blank, 10);
-                          flagrestart == FALSE;
-                      }
+                                  if(frillflag == TRUE)
+                                  {
+                                      write_message(blank, 8);
+                                      frillflag = FALSE;
+                                  }
 
-                      if(d_error == TRUE)
-                      {
-                          write_message(blank, 2);
-                          d_error = FALSE;
-                      }
-
-                      if(frillflag == TRUE)
-                      {
-                          write_message(blank, 8);
-                          frillflag = FALSE;
-                      }
-
-                     /* Move mouse along left wall */
-                     left_hugger(&dir, &x, &y, north, east, west, south);
-                     /* Increment number of cells */
-                     cells ++;
-                     break;
+                                 /* Move mouse along left wall */
+                                 left_hugger(&dir, &x, &y, north, east, west, south);
+                                 /* Increment number of cells */
+                                 cells ++;
+                                 break;
 
 		  /* Random mouse movement (mouse's choice to move) */
 		  case ' ' : 
-                     /* Increment number of cells */
-                     cells ++;
+                                 /* Increment number of cells */
+                                 cells ++;
 
-                     /* Change flag */
-                     frillflag = TRUE;
+                                 /* Change flag */
+                                 frillflag = TRUE;
 
-                     /* Clear messages if flags were triggered */
-                     if(ready == TRUE)
-                     {
-                         write_message(blank, 10);
-                         ready = FALSE;
-                     }
+                                 /* Clear messages if flags were triggered */
+                                 if(ready == TRUE)
+                                 {
+                                     write_message(blank, 10);
+                                     ready = FALSE;
+                                 }
             
-                     if(tep_flag == TRUE)
-                     {
-                         write_message(blank, 8);
-                         tep_flag = FALSE;
-                     }
+                                 if(tep_flag == TRUE)
+                                 {
+                                     write_message(blank, 8);
+                                     tep_flag = FALSE;
+                                 }
 
-                     if(kellen_flag == TRUE)
-                     {
-                         write_message(blank, 8);
-                         kellen_flag = FALSE;
-                     }	
+                                 if(kellen_flag == TRUE)
+                                 {
+                                     write_message(blank, 8);
+                                     kellen_flag = FALSE;
+                                 }	
 
-                     if(flagrestart == TRUE)
-                     {
-                         write_message(blank, 10);
-                         flagrestart == FALSE;
-                     }
+                                 if(flagrestart == TRUE)
+                                 {
+                                     write_message(blank, 10);
+                                     flagrestart == FALSE;
+                                 }
 
-                     if(d_error == TRUE)
-                     {
-                         write_message(blank, 2);
-                         d_error = FALSE;
-                     }
+                                 if(d_error == TRUE)
+                                 {
+                                     write_message(blank, 2);
+                                     d_error = FALSE;
+                                 }
 
-                     /* Get random number */
-                     random = random_mouse();
+                                 /* Get random number */
+                                 random = random_mouse();
 
-                     /* Move mouse along right wall */
-                     if(random == 1)
-                     {
-                         right_hugger(&dir, &x, &y, north, east, west, south);
-                     }
+                                 /* Move mouse along right wall */
+                                 if(random == 1)
+                                 {
+                                     right_hugger(&dir, &x, &y, north, east, west, south);
+                                 }
 
-                     /* Move mouse along left wall */
-                     else
-                     {
-                         left_hugger(&dir, &x, &y, north, east, west, south);
-                     }
+                                 /* Move mouse along left wall */
+                                 else
+                                 {
+                                     left_hugger(&dir, &x, &y, north, east, west, south);
+                                 }
 
-                     /* Print frill message */
-                     write_message(rand, 8);
-                     break;
+                                 /* Print frill message */
+                                 write_message(rand, 8);
+                                 break;
 
 		  /* Print easter eggs messages */
 		  case 't' :
-		             write_message("HI PROFESSOR TEP! :D", 8);
-                     tep_flag = TRUE;
-                     break;
+		                 write_message("HI PROFESSOR TEP! :D", 8);
+                                 tep_flag = TRUE;
+                                 break;
 
 		  case 'k' :
-	                 write_message("HI KELLEN! :D", 8);
-                     kellen_flag = TRUE;
-                     break;
+	                         write_message("HI KELLEN! :D", 8);
+                                 kellen_flag = TRUE;
+                                 break;
 		
 		  /* Print error messages */
-	      default  :
-		             if (d_error == FALSE)
-                     {
-                         write_message(error, 2);
-                     }
-                     d_error = TRUE;
-	  }
+	          default  :
+		                if (d_error == FALSE)
+                                 {
+                                     write_message(error, 2);
+                                 }
+                                d_error = TRUE;
+	  }            
 
 	  /* Get walls for next coordinate in newmaze */
 	  getwall_newmaze(x, y, &north, &east, &west, &south);
 
 	  /* Get direction for mousecam */
-      dir_mousecam(&dir, &ncam, &ecam, &wcam, north, south, east, west);
+          dir_mousecam(&dir, &ncam, &ecam, &wcam, north, south, east, west);
 
 	  /* Show mousecam to display */
-      mouse_cam(wcam, ncam, ecam);
+          mouse_cam(wcam, ncam, ecam);
 
 	  /* Print win messages */
 	  if ((x == 8 || x == 7) && (y == 8 || y == 7))
@@ -376,7 +376,7 @@ void level3(int level)
 	  /* Print crash messages */
 	  if (dir == CRASH)
 	  {
-		  /* Show crashed mouse */
+              /* Show crashed mouse */
 	      show_mouse(dir, x, y);
 
 		  write_message(crash1, 3);
@@ -418,7 +418,7 @@ void level3(int level)
 		  {
 		      break;
 		  }
-      }
+          }
 
 	  /* Change unique cell flag from unpassed to passed */
 	  if (maze[x][y] == 0)
@@ -429,24 +429,24 @@ void level3(int level)
           unique_c++;
       }
 
-	  /* Show number of unique cells on display */
+      /* Show number of unique cells on display */
       show_unique_cells(unique_c);
 
-	  /* Show number of cells on display */
+      /* Show number of cells on display */
       show_cells(cells);
 
-	  /* Show mouse on display */
+      /* Show mouse on display */
       show_mouse(dir, x, y);
 
-	  /* Place walls onto display */
+      /* Place walls onto display */
       put_walls(x, y, north, east, west, south);
-		
-	  /* Show new coordinates on display */
+	
+      /* Show new coordinates on display */
       show_position(x, y);
 
-	  /* Get next command */
+      /* Get next command */
       input = getchar();
-	}
+  }
 
   /* Close the maze */
   clear_screen();
