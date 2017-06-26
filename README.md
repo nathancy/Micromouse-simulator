@@ -1,6 +1,7 @@
 # Micromouse-simulator
 Micromouse simulator with four levels
 
+Demo video. Watch in 1440 HD!
 [![Video](http://img.youtube.com/vi/Nb8YTFCTzjM/0.jpg)](https://www.youtube.com/watch?v=Nb8YTFCTzjM)
 
 ### Level 0: Drive the Mouse
@@ -12,6 +13,8 @@ You may use w,s,a,d commands in the predefined visible maze to control the mouse
 * d - right
 * Entire maze is visible
 
+![](doc/level0.JPG)
+
 ### Level 1: Mouse Discovers
 You may use Level 0 commands, r, l, and m, commands in the predefined hidden maze. Features:
 
@@ -21,11 +24,15 @@ You may use Level 0 commands, r, l, and m, commands in the predefined hidden maz
 * Mousecam
 * Cell counter
 
+![](doc/level1.JPG)
+
 ### Level 2: Mouse Explores
 You may use Level 1 commands and the n command.
 
 * n - hide maze
 * Unique cell count
+
+![](doc/level2.JPG)
 
 ### Level 3: Da Frills
 You may use all above commands and the space command.
@@ -36,6 +43,8 @@ Additional Frills:
   - Default level is 0
   - In level 2 and above, a new maze map is available
   - Hidden easter eggs
+
+![](doc/level3.JPG)
 
 # Developers Guide
 Clone the repository with:
@@ -52,4 +61,5 @@ Run the simulator with:
 mazerunner
 ```
 
-Note: The simulator runs best in a 80 col x 48 line window. If your screen is too small, the maze may not appear correctly. 
+Note: The simulator runs best in an 80 col x 48 line window. If your screen is too small, the maze may not appear correctly. Note "display.o" is purposely in the repository as the original source file was lost.
+
