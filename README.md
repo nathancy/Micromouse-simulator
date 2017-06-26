@@ -1,7 +1,10 @@
 # Micromouse-simulator
-Micromouse simulator with four levels
+Micromouse simulator with four levels. 
 
+```
 Demo video. Watch in 1440 HD!
+```
+
 [![Video](http://img.youtube.com/vi/Nb8YTFCTzjM/0.jpg)](https://www.youtube.com/watch?v=Nb8YTFCTzjM)
 
 ### Level 0: Drive the Mouse
