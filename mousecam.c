@@ -4,6 +4,9 @@
    Team  : Hot Wings
    Date  : 5/6/2015  */
 
+/* This file contains the function that obtains the north, west, and east
+   view of the mouse. */
+
 #include <stdio.h>
 #include "display.h"
 #include "functions.h"
@@ -11,13 +14,10 @@
 #include "mousecam.h"
 #define DEBUG
 
-/* This file contains the function that obtains the north, west, and east
-   view of the mouse. */
-
-void dir_mousecam(int *dir, int *northcam, int *eastcam, int *westcam, int north, int south, int east, int west)
 /* Function is indirectly given the direction and directly given the walls.
-   It tests all possible scenarios and indirectly returns the view 
-   of the mouse by pointers. */ 
+   It tests all possible scenarios and indirectly returns the view
+   of the mouse by pointers. */
+void dir_mousecam(int *dir, int *northcam, int *eastcam, int *westcam, int north, int south, int east, int west)
 {
 
 	if(*dir == NORTH && north == 1 && east == 1 && west == 1)
@@ -44,7 +44,6 @@ void dir_mousecam(int *dir, int *northcam, int *eastcam, int *westcam, int north
 		*eastcam = 1;
 		*westcam = 1;
 	}
-
 
 
 	else if(*dir == NORTH && west == 1 && east == 1)
@@ -227,7 +226,6 @@ void dir_mousecam(int *dir, int *northcam, int *eastcam, int *westcam, int north
 	}
 	
 
-	
 	else if(*dir == EAST && west == 1)
 	{
 		*northcam = 0;
@@ -251,8 +249,7 @@ void dir_mousecam(int *dir, int *northcam, int *eastcam, int *westcam, int north
 		*northcam = 0;
 		*eastcam = 1;
 		*westcam = 0;
-	} 
-
+	}
 
 
 	else if(*dir == EAST && north == 0 && east == 0 && south == 0 && west == 0)

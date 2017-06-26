@@ -51,7 +51,6 @@ void level1(int level)
   ready = TRUE;
   dir = NORTH;
 
-
   /* Initiate the display to level 1 */
   init_display(level);
 
@@ -97,7 +96,7 @@ void level1(int level)
 
     switch(input)
     {
-        /* Change direction */
+      /* Change direction */
       case 'a' :
                  dir = getdirection(input, dir);
                  break;
