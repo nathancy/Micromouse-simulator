@@ -83,6 +83,7 @@ crashlytics-build.properties
 fabric.properties
 
 *.iml
+*.o
 
 # jekyll
 _site
