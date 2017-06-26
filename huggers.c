@@ -4,6 +4,9 @@
    Team  : Hot Wings
    Date  : 5/6/2015  */
 
+/* This file contains the functions that control right and left
+   wall huggers. */
+
 #include <stdio.h>
 #include "display.h"
 #include "functions.h"
@@ -11,15 +14,12 @@
 #include "mousecam.h"
 #define DEBUG
 
-
-/* This file contains the functions that control right and left 
-   wall huggers. */
-
-void right_hugger(int *dir, int *x, int *y, int north, int east, int west, int south)
-/* Function is indirectly given the direction and coordinates, and directly    given the walls. It checks the surrounding walls in the next direction
+/* Function is indirectly given the direction and coordinates, and directly given the walls. It checks the surrounding walls in the next direction
    for each scenario and moves the mouse by hugging the right wall. */
+void right_hugger(int *dir, int *x, int *y, int north, int east, int west, int south)
 {
-int d;
+  int d;
+
 	if(*dir == NORTH && north == 1 && east == 1 && west == 1)
 	{
 		*dir = SOUTH;
@@ -44,7 +44,6 @@ int d;
 		d = WEST;
 		movemouse(d, y, x);
 	}
-
 
 
 	else if(*dir == NORTH && west == 1 && east == 1)
@@ -201,7 +200,6 @@ int d;
 		d = WEST;
 		movemouse(d, y, x);
 	}
-	
 
 	
 	else if(*dir == EAST && west == 1)
@@ -230,7 +228,6 @@ int d;
 	} 
 
 
-
 	else if(*dir == EAST && north == 0 && east == 0 && south == 0 && west == 0)
 	{
 		*dir = SOUTH;
@@ -257,16 +254,13 @@ int d;
 	}
 }
 
-
-
-void left_hugger(int *dir, int *x, int *y, int north, int east, int west, int south)
-/* This function is indirectly given the direction and coordinates and 
+/* This function is indirectly given the direction and coordinates and
    directly given the walls. It checks the surrounding walls in the next
-   direction for each scenario and moves the mouse by hugging the 
-   left wall. */ 
+   direction for each scenario and moves the mouse by hugging the
+   left wall. */
+void left_hugger(int *dir, int *x, int *y, int north, int east, int west, int south)
 {
-int d;
-
+  int d;
 
 	if(*dir == NORTH && north == 1 && east == 1 && west == 1)
 	{
@@ -292,7 +286,6 @@ int d;
 		d = WEST;
 		movemouse(d, y, x);
 	}
-
 
 
 	else if(*dir == NORTH && west == 1 && east == 1)
@@ -321,8 +314,6 @@ int d;
 	}
 
 
-
-
 	else if(*dir == NORTH && north == 1 && east == 1)
 	{
 		*dir = WEST;
@@ -347,8 +338,6 @@ int d;
 		d = NORTH;
 		movemouse(d, y, x);
 	}
-
-
 
 
 	else if(*dir == EAST && north == 1 && east == 1)
@@ -377,7 +366,6 @@ int d;
 	}
 
 
-
 	else if (*dir == EAST && east == 1)
 	{
 		*dir = NORTH;
@@ -402,7 +390,6 @@ int d;
 		d = SOUTH;	
 		movemouse(d, y, x);
 	}
-
 
 
 	else if (*dir == EAST && north == 1)
@@ -431,7 +418,6 @@ int d;
 	}
 
 
-
 	else if (*dir == EAST && west == 1)
 	{
 		*dir = NORTH;
@@ -456,7 +442,6 @@ int d;
 		d = EAST;
 		movemouse(d, y, x);
 	}
-
 
 
 	else if (*dir == EAST && south == 1)
@@ -485,7 +470,6 @@ int d;
 	}
 
 
-
 	else if (*dir == EAST && north == 0 && south == 0 && east == 0 && west == 0)
 	{
 		*dir = NORTH;
@@ -511,8 +495,3 @@ int d;
 		movemouse(d, y, x);
 	}
 }
-
-
-
-
-
