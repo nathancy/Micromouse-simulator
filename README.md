@@ -5,7 +5,8 @@ Micromouse simulator with four levels.
 Demo video. Watch in 1440 HD!
 ```
 
-[![Video](http://img.youtube.com/vi/Nb8YTFCTzjM/0.jpg)](https://www.youtube.com/watch?v=Nb8YTFCTzjM)
+[![Micromouse Simulator Video](doc/micromouse_youtube.PNG)](https://www.youtube.com/watch?v=Nb8YTFCTzjM "Micromouse Simulator - Click to Watch!")
+
 
 ### Level 0: Drive the Mouse
 You may use w,s,a,d commands in the predefined visible maze to control the mouse. Features:
